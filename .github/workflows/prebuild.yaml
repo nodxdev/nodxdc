@@ -24,6 +24,6 @@ jobs:
       - name: Build and push the image
         uses: devcontainers/ci@v0.3
         with:
-          imageName: ghcr.io/nodx/nodxdc
+          imageName: ghcr.io/nodxdev/nodxdc
           imageTag: ${{ github.sha }}, latest
           push: always
