@@ -1,0 +1,57 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/debian
+{
+  "build": {
+    "dockerfile": "./Dockerfile"
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "golang.go",
+        "denoland.vscode-deno",
+        "mhutchie.git-graph",
+        "mutantdino.resourcemonitor",
+        "Compile-TomaszKasperczyk.copy-to-llm"
+      ],
+      "settings": {
+        "deno.enable": true,
+        "editor.formatOnSave": true,
+        "editor.foldingStrategy": "indentation",
+        "files.eol": "\n",
+        "go.lintTool": "golangci-lint",
+        "go.lintFlags": [
+          "--fast"
+        ],
+        "copyToLLM.extensions": [
+          ".sh",
+          ".mod",
+          ".yaml",
+          ".json",
+          ".go",
+          ".md",
+          ".ts",
+          ".js"
+        ],
+        // Explicitly set the default formatter for each language
+        "[go]": {
+          "editor.defaultFormatter": "golang.go"
+        },
+        "[typescript]": {
+          "editor.defaultFormatter": "denoland.vscode-deno"
+        },
+        "[javascript]": {
+          "editor.defaultFormatter": "denoland.vscode-deno"
+        },
+        "[markdown]": {
+          "editor.defaultFormatter": "denoland.vscode-deno"
+        },
+        "[json]": {
+          "editor.defaultFormatter": "denoland.vscode-deno"
+        },
+        "[jsonc]": {
+          "editor.defaultFormatter": "denoland.vscode-deno"
+        }
+      }
+    }
+  }
+}
