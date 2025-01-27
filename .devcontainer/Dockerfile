@@ -21,8 +21,8 @@ ENV PATH="$PATH:/usr/local/gobin"
 COPY --from=deno /usr/bin/deno /usr/local/bin/deno
 
 # Install system dependencies
-RUN apt-get update && \
-    apt-get install -y gcc wget curl iputils-ping net-tools git zip unzip p7zip-full && \
+RUN apt-get -qq update && \
+    apt-get -qq install -y gcc wget curl iputils-ping net-tools git zip unzip p7zip-full && \
     rm -rf /var/lib/apt/lists/*
 
 # Install dependencies with go install
